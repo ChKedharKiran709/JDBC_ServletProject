@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Management System</title>
+<style>
+    /* General reset and styling */
+    body {
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #1a1a2e;
+        color: #fff;
+    }
+
+    .container {
+        background: #16213e;
+        color: #fff;
+        width: 350px;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+        transform: translateY(-5px);
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #4ecca3;
+        text-align: center;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        display: block;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: #a3a3a3;
+    }
+
+    input[type="text"], 
+    input[type="password"] {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #2c3e50;
+        border-radius: 8px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        background: #0f3460;
+        color: #fff;
+    }
+
+    input[type="text"]:focus, 
+    input[type="password"]:focus {
+        border-color: #4ecca3;
+        box-shadow: 0 0 8px rgba(78, 204, 163, 0.4);
+        outline: none;
+    }
+
+    input[type="text"]::placeholder, 
+    input[type="password"]::placeholder {
+        color: #6c757d;
+    }
+
+    button {
+        background: linear-gradient(135deg, #4ecca3, #2c7873);
+        color: #fff;
+        border: none;
+        padding: 14px 20px;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #2c7873, #4ecca3);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(78, 204, 163, 0.4);
+    }
+
+    .form-footer {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+        color: #a3a3a3;
+    }
+
+    .form-footer a {
+        color: #4ecca3;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .form-footer a:hover {
+        color: #2c7873;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+        animation: fadeIn 0.5s ease-out;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="login" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
